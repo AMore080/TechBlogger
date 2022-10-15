@@ -40,3 +40,5 @@ UserPost.init(
         modelName: 'userpost',
     }
 )
+
+module.exports = UserPost;
