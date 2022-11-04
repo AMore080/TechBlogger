@@ -1,0 +1,14 @@
+{{#each posts as |post| }}
+<div class="grid auto-cols-auto text-black gap-6 max-w-3xl border-4 my-4 bg-slate-100 rounded-lg p-5 drop-shadow-2xl text-xl">
+  <div>
+    <p>
+      <!-- Pass needed_funding value to the helper function -->
+      <span class="font-bold text-2xl">{{post.title}}</span>
+    </p>
+    <p>
+      {{post.post}}
+    </p>
+    <p class="text-gray-500 text-sm">Created by {{post.user.name}}</p>
+  </div>
+</div>
+{{/each}}
