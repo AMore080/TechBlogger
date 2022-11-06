@@ -10,17 +10,17 @@
 
 <body class="bg-neutral-200">
   <container class="flex flex-row h-24 justify-start items-center
-  bg-gradient-to-r from-cyan-400 to-blue-500">
+  bg-gradient-to-r from-cyan-400 to-blue-500 drop-shadow-xl">
     <h1 class="px-8 text-3xl text-white font-bold">Tech Blog</h1>
     <container class="flex flex-row w-64 justify-around">
-      {{#if logged_in}}
-      <a href="/profile">profile</a>
-      <button class="no-button" id="logout">logout</button>
-      {{else}}
-      <h1 class="font-bold text-white"><a href="#">Login</a></h1>
-      {{/if}}
-      <h1 class="text-white font-bold"><a href="#">Home</a></h1>
-      <h1 class="text-white font-bold"><a href="#">Dashboard</a></h1>
+        {{#if logged_in}}
+        <h1 class="font-bold text-white ml-5 mr-3" href="/profile"><a href="/profile">Profile</a></h1>
+        <h1 class="font-bold text-white mr-3"><a href="#" id="logout">Logout</a></h1>
+        {{else}}
+        <h1 class="font-bold text-white mr-3"><a href="/login">Login</a></h1>
+        {{/if}}
+      <h1 class="text-white font-bold mr-3"><a href="/">Home</a></h1>
+      <h1 class="text-white font-bold mr-3"><a href="#">Post</a></h1>
     </container>
   </container>
   <div>
@@ -35,7 +35,7 @@
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
-  <script src="/js/logout.js"></script>
+  <script src="./js/logout.js"></script>
   {{/if}}
 </body>
 
