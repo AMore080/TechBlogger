@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Javascript is kinda epic?",
+        "post": "Javascript can kinda be fun when you try",
+        "user_id": 2
+    },
+    {
+        "title": "Where is react tho?",
+        "post": "I WANT REACT",
+        "user_id": 2
+    },
+    {
+        "title": "Javascript is awesome?",
+        "post": "Javascript Do be cool",
+        "user_id": 3
+    }
+]
