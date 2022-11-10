@@ -2,15 +2,12 @@ const router = require('express').Router();
 const { UserPost } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.get('/', (req,res) => {
-    res.render('post')
-})
 
 router.post('/', withAuth, async (req,res) => {
     try{
         const newPost = await UserPost.create({
             ...req.body,
-            user_id: req.session.user_id
+            user_id: req.session.user_id,
         });
         res.status(200).json(newPost);
     } catch (err) {
