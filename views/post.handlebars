@@ -1,4 +1,6 @@
-<h3 class="my-10 font-serif text-3xl">Create a New Post:</h3>
+<h2 class="text-3xl my-3">Welcome, {{name}}</h2>
+
+<h3 class="my-10 text-3xl">Create a New Post:</h3>
 <form class="mt-8 max-w-md new-post-form">
     <div class="grid grid-cols-1 gap-6">
         <label for="title" class="block text-xl">Title:</label>
@@ -12,5 +14,23 @@
         <button type="submit" id='post-button' class="rounded-md bg-blue-300 p-2">Create</button>
     </div>
 </form>
+
+
+  <div class="col-md-6 project-list">
+    <h3>Current Posts:</h3>
+
+    {{#each userposts as |userpost|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a>{{userpost.title}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{userpost.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
+
 
 <script src="../js/post.js"></script>
