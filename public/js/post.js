@@ -23,6 +23,27 @@ const newPost = async (event) => {
     }
 };
 
+const delButton = async (event) => {
+  if(event.target.hasAttribute('data-id')){
+    const id = event.target.getAttribute('data-id');
+
+    const response = await fetch(`/api/post/${id}`, {
+      method: 'DELETE',
+    });
+
+    if(response.ok) {
+      document.location.replace('/profile')
+    } else {
+      alert('Failed to delete Project')
+    }
+
+  }
+}
+
 document
     .querySelector('.new-post-form')
     .addEventListener('submit', newPost);
+
+document
+  .querySelector('.deleteButton')
+  .addEventListener('click',delButton);
