@@ -1,0 +1,22 @@
+<div class="grid auto-cols-auto text-black gap-6 max-w-3xl border-4 my-5 bg-slate-100 rounded-lg p-5 drop-shadow-2xl text-xl auto-rows-auto">
+  <div>
+    <p>
+      <span class="font-bold text-2xl">{{title}}</span>
+    </p>
+    <p>
+      {{post}}
+    </p>
+    <p class="text-gray-500 text-sm break-words">Created by {{user.name}} {{format_date date_created}}</p>
+  </div>
+</div>
+
+    <h3 class="my-10 text-3xl font-bold">Comment:</h3>
+    <form class="mt-8 max-w-md new-comment-form">
+        <div class="py-8">
+            <label for="post" class="form-label block">Post:</label>
+            <textarea type="text" class="mt-1 block w-full" id="post" placeholder="Type a comment..."></textarea>
+        </div>
+        <div class="form-group col-4">
+            <button type="submit" id='post-button' class="rounded-md bg-blue-300 p-2 drop-shadow-md	">Create</button>
+        </div>
+    </form>
