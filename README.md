@@ -14,3 +14,15 @@ A tech blog website where a user can post their thoughts on current technology.
 - MySQL
 - Sequelize
 - Handlebars
+
+# Installation
+No installation needed. Check out the deployed link here: https://techblog12121.herokuapp.com/
+
+# License
+Licensed Under MIT
+
+# Questions?
+
+Get in touch with me at alexmore080@gmail.com
+
+Link to my github: https://github.com/AMore080
